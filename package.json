@@ -1,0 +1,24 @@
+{
+  "name": "should-you-sell-the-car",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scorpion19702022/should-you-sell-the-car.git"
+  },
+  "author": "Jacek Mosiński",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scorpion19702022/should-you-sell-the-car/issues"
+  },
+  "homepage": "https://github.com/Scorpion19702022/should-you-sell-the-car#readme",
+  "devDependencies": {
+    "Babel": "^0.0.1",
+    "live-server": "^1.2.2",
+    "sass-compiler": "^1.3.2-beta"
+  }
+}
