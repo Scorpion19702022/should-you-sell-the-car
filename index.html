@@ -18,7 +18,41 @@
 
 <body>
 
+    <h1>Sprawdź, czy powinnaś/neś sprzedać swój samochód</h1>
+    <p>Jeżeli podasz dane swojego samochodu, sprawdzisz jego wartość użytkową. Jeżeli Twój samochód posiada przynajmnie
+        jedną z poniższych cech, oznacza to że jego wartość użytkowa jest niska i trzeba rozważyć jego spraedaż:</p>
+    <ul>
+        <li>wiek pojazdu</li>
+        <li>przebieg pojazdu</li>
+        <li>częste wizyty w warsztacie na przestrzeni ostatnich 2 lat</li>
+        <li>poważna kolizja</li>
+    </ul>
 
+    <p class="error">wypełnij wszystkie pola by uzyskać informację</p>
+
+    <div class="info">
+        <label for="model" class="info__model">model samochodu:</label>
+        <input type="text" id="model" class="info__inputmodel">
+
+        <label for="year" class="info__year">rok produkcji:</label>
+        <input type="number" id="year" class="info__inputyear">
+
+        <label for="mileage" class="info__mileage">przebieg w kilometrach:</label>
+        <input type="number" id="mileage" class="info__inputmileage">
+
+        <label for="visit" class="info__visit">ilość wizyt w warsztacie w ostatnich dwóch latach:</label>
+        <input type="number" id="visit" class="info__inputvisit">
+    </div>
+
+    <div class="btns">
+        <button class="btns__advise">Sprawdź</button>
+        <button class="btns__clear">Wyczyść</button>
+    </div>
+
+    <div class="box">
+        <div class="box__info"></div>
+        <div class="box__advise"></div>
+    </div>
 
 
 
