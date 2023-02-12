@@ -31,7 +31,7 @@ body {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	text-align: center;
 	color: var(--color-lighttwo);
 	padding-bottom: 0.8em;
@@ -47,6 +47,11 @@ p {
 }
 
 ul {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;
 	font-size: 1rem;
 	color: var(--color-lighttwo);
 	padding-bottom: 1em;
@@ -54,6 +59,12 @@ ul {
 
 li {
 	margin-bottom: 0.4em;
+}
+
+.error {
+	font-size: 1rem;
+	padding-bottom: 1.8em;
+	color: var(--color-error);
 }
 
 @import './medium';
