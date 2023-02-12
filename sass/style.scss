@@ -19,5 +19,15 @@
 	--color-error: #ff0000;
 }
 
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.2em;
+	background-color: var(--color-darkone);
+}
+
 @import './medium';
 @import './extra\ large';
