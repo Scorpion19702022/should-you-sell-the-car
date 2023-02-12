@@ -27,6 +27,11 @@ body {
 	align-items: center;
 	padding: 1.2em;
 	background-color: var(--color-darkone);
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul {
+	text-align: center;
 }
 
 @import './medium';
