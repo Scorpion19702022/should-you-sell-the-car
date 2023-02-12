@@ -121,4 +121,33 @@ li {
   border: none;
   color: var(--color-lightone);
   border-bottom: 0.04em solid var(--color-lightthree);
+}
+
+.btns {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2em;
+}
+.btns button {
+  width: 42%;
+  padding: 0.4em 0.2em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background: none;
+  border: 0.04em solid var(--color-middleone);
+  border-radius: 0.4em;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em var(--color-middletwo);
+          box-shadow: 0.2em 0.2em 0.8em var(--color-middletwo);
+  color: var(--color-lightone);
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.btns button:hover {
+  background: var(--color-middletwo);
 }/*# sourceMappingURL=style.css.map */

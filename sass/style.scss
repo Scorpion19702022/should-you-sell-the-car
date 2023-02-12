@@ -94,5 +94,28 @@ li {
 	}
 }
 
+.btns {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 2em;
+	button {
+		width: 42%;
+		padding: 0.4em 0.2em;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		background: none;
+		border: 0.04em solid var(--color-middleone);
+		border-radius: 0.4em;
+		box-shadow: 0.2em 0.2em 0.8em var(--color-middletwo);
+		color: var(--color-lightone);
+		cursor: pointer;
+		transition: background 0.3s ease-in-out;
+		&:hover {
+			background: var(--color-middletwo);
+		}
+	}
+}
+
 @import './medium';
 @import './extra\ large';
