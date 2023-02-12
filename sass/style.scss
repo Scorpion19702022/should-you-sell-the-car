@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--color-lightone: #e8e8f0;
+	--color-lighttwo: #babad4;
+	--color-lightthree: #8c8cb7;
+	--color-middleone: #5e5e9a;
+	--color-middletwo: #191970;
+	--color-middlethree: #11114e;
+	--color-darkone: #0a0a2c;
+	--color-darktwo: #02020b;
+	--color-info: #ffff00;
+	--color-error: #ff0000;
+}
+
+@import './medium';
+@import './extra\ large';
