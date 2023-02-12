@@ -30,8 +30,30 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
-ul {
+h1 {
+	font-size: 2rem;
 	text-align: center;
+	color: var(--color-lighttwo);
+	padding-bottom: 0.8em;
+	margin-bottom: 0.6em;
+	border-bottom: 0.04em solid var(--color-lighttwo);
+}
+
+p {
+	font-size: 1rem;
+	color: var(--color-lightone);
+	text-align: center;
+	padding-bottom: 0.8em;
+}
+
+ul {
+	font-size: 1rem;
+	color: var(--color-lighttwo);
+	padding-bottom: 1em;
+}
+
+li {
+	margin-bottom: 0.4em;
 }
 
 @import './medium';
