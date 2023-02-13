@@ -8,14 +8,14 @@
 }
 
 :root {
-  --color-lightone: #e8e8f0;
-  --color-lighttwo: #babad4;
-  --color-lightthree: #8c8cb7;
-  --color-middleone: #5e5e9a;
-  --color-middletwo: #191970;
-  --color-middlethree: #11114e;
-  --color-darkone: #0a0a2c;
-  --color-darktwo: #02020b;
+  --color-lightone: #e5e5fa;
+  --color-lighttwo: #b2b2f0;
+  --color-lightthree: #7f7fe6;
+  --color-middleone: #4c4cdc;
+  --color-middletwo: #0000cd;
+  --color-middlethree: #00007b;
+  --color-darkone: #00003d;
+  --color-darktwo: #000014;
   --color-info: #ffff00;
   --color-error: #ff0000;
 }
@@ -109,7 +109,7 @@ li {
   display: flex;
   text-align: left;
   font-size: 1rem;
-  color: var(--color-lightthree);
+  color: var(--color-lighttwo);
   margin: 0.6em 0 0.2em;
 }
 .info input,
@@ -121,6 +121,7 @@ li {
   border: none;
   color: var(--color-lightone);
   border-bottom: 0.04em solid var(--color-lightthree);
+  border-right: 0.04em solid var(--color-lightthree);
 }
 
 .btns {
