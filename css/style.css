@@ -40,7 +40,22 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-h1 {
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper h1 {
   font-size: 1.8rem;
   text-align: center;
   color: var(--color-lighttwo);
@@ -48,15 +63,13 @@ h1 {
   margin-bottom: 0.6em;
   border-bottom: 0.04em solid var(--color-lighttwo);
 }
-
-p {
+.wrapper p {
   font-size: 1rem;
   color: var(--color-lightone);
   text-align: center;
   padding-bottom: 0.8em;
 }
-
-ul {
+.wrapper ul {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,18 +87,15 @@ ul {
   color: var(--color-lighttwo);
   padding-bottom: 1em;
 }
-
-li {
+.wrapper li {
   margin-bottom: 0.4em;
 }
-
-.error {
+.wrapper .error {
   font-size: 1rem;
   padding-bottom: 1.8em;
   color: var(--color-error);
 }
-
-.info {
+.wrapper .info {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +112,7 @@ li {
           align-items: center;
   margin-bottom: 1.2em;
 }
-.info label {
+.wrapper .info label {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,8 +122,8 @@ li {
   color: var(--color-lighttwo);
   margin: 0.6em 0 0.2em;
 }
-.info input,
-.info select {
+.wrapper .info input,
+.wrapper .info select {
   width: 100%;
   padding: 0.2em 0.4em;
   font-size: 1.4rem;
@@ -123,8 +133,7 @@ li {
   border-bottom: 0.04em solid var(--color-lightthree);
   border-right: 0.04em solid var(--color-lightthree);
 }
-
-.btns {
+.wrapper .btns {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,7 +143,7 @@ li {
           justify-content: space-between;
   margin: 2em;
 }
-.btns button {
+.wrapper .btns button {
   width: 42%;
   padding: 0.4em 0.2em;
   font-size: 1.2rem;
@@ -149,7 +158,7 @@ li {
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
-.btns button:hover {
+.wrapper .btns button:hover {
   background: var(--color-middletwo);
 }
 
@@ -190,6 +199,7 @@ li {
   width: 100%;
   font-size: 1.2rem;
   text-align: left;
+  color: var(--color-lightone);
 }
 .advice__car spam {
   color: var(--color-info);
@@ -232,6 +242,103 @@ li {
   }
   ul {
     width: 40%;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0rem 4rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper {
+    width: 50%;
+    height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-right: 8em;
+    border-right: 0.04em solid var(--color-lighttwo);
+  }
+  .wrapper h1 {
+    font-size: 2.2rem;
+    padding-bottom: 0.2em;
+  }
+  .wrapper p {
+    font-size: 1.2rem;
+  }
+  .wrapper ul {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+  .wrapper .btns button {
+    width: 35%;
+    margin-bottom: 0;
+  }
+  .advice {
+    padding: 0;
+    width: 45%;
+    height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .advice__car {
+    height: 40%;
+    padding-left: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .advice__sell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    height: 50%;
+  }
+  .advice__sell h3 {
+    font-size: 2rem;
+    padding-bottom: 2em;
+  }
+  .advice__sell p {
     font-size: 1.4rem;
   }
 }/*# sourceMappingURL=style.css.map */

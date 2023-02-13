@@ -17,43 +17,45 @@
 </head>
 
 <body>
+    <div class="wrapper">
+        <h1>Sprawdź, czy powinnaś/neś sprzedać swój samochód</h1>
+        <p>Jeżeli podasz dane swojego samochodu, sprawdzisz jego wartość użytkową. Jeżeli Twój samochód posiada
+            przynajmnie
+            jedną z poniższych cech, oznacza to że jego wartość użytkowa jest niska i trzeba rozważyć jego spraedaż:</p>
+        <ul>
+            <li>wiek pojazdu</li>
+            <li>przebieg pojazdu</li>
+            <li>częste wizyty w warsztacie na przestrzeni ostatnich 2 lat</li>
+            <li>poważna kolizja</li>
+        </ul>
 
-    <h1>Sprawdź, czy powinnaś/neś sprzedać swój samochód</h1>
-    <p>Jeżeli podasz dane swojego samochodu, sprawdzisz jego wartość użytkową. Jeżeli Twój samochód posiada przynajmnie
-        jedną z poniższych cech, oznacza to że jego wartość użytkowa jest niska i trzeba rozważyć jego spraedaż:</p>
-    <ul>
-        <li>wiek pojazdu</li>
-        <li>przebieg pojazdu</li>
-        <li>częste wizyty w warsztacie na przestrzeni ostatnich 2 lat</li>
-        <li>poważna kolizja</li>
-    </ul>
+        <p class="error">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nulla?</p>
 
-    <p class="error"></p>
+        <div class="info">
+            <label for="model" class="info__model">model samochodu:</label>
+            <input type="text" id="model" class="info__inputmodel">
 
-    <div class="info">
-        <label for="model" class="info__model">model samochodu:</label>
-        <input type="text" id="model" class="info__inputmodel">
+            <label for="year" class="info__year">rok produkcji:</label>
+            <input type="number" id="year" class="info__inputyear">
 
-        <label for="year" class="info__year">rok produkcji:</label>
-        <input type="number" id="year" class="info__inputyear">
+            <label for="mileage" class="info__mileage">przebieg w kilometrach:</label>
+            <input type="number" id="mileage" class="info__inputmileage">
 
-        <label for="mileage" class="info__mileage">przebieg w kilometrach:</label>
-        <input type="number" id="mileage" class="info__inputmileage">
+            <label for="visit" class="info__visit">ilość wizyt w warsztacie w ostatnich 2 latach:</label>
+            <input type="number" id="visit" class="info__inputvisit">
 
-        <label for="visit" class="info__visit">ilość wizyt w warsztacie w ostatnich 2 latach:</label>
-        <input type="number" id="visit" class="info__inputvisit">
+            <label for="accident" class="info__accident">Poważna kolizja:</label>
+            <select id="accident" class="info__select">
+                <option value="0" disabled selected>-wybierz-</option>
+                <option value="TAK">TAK</option>
+                <option value="NIE">NIE</option>
+            </select>
+        </div>
 
-        <label for="accident" class="info__accident">Poważna kolizja:</label>
-        <select id="accident" class="info__select">
-            <option value="0" disabled selected>-wybierz-</option>
-            <option value="TAK">TAK</option>
-            <option value="NIE">NIE</option>
-        </select>
-    </div>
-
-    <div class="btns">
-        <button class="btns__advise">Sprawdź</button>
-        <button class="btns__clear">Wyczyść</button>
+        <div class="btns">
+            <button class="btns__advise">Sprawdź</button>
+            <button class="btns__clear">Wyczyść</button>
+        </div>
     </div>
 
     <div class="box">
@@ -76,10 +78,10 @@
         </div>
         <div class="advice__sell">
             <h3>Informacja:</h3>
-            <p class="adcice__sell--info"></p>
+            <p class="adcice__sell--info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores architecto
+                rerum animi, fuga debitis voluptatem voluptate minima hic officia soluta.</p>
         </div>
     </div>
-
 
 
 
