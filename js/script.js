@@ -19,6 +19,26 @@ const info = document.querySelector('.advice__sell--info')
 
 let dateYear = new Date()
 let todayYear = dateYear.getFullYear()
+let age = todayYear - year.value
+
+class CarInfo {
+	constructor(brand, year, mileage, visit, accident) {
+		this.brand = brand
+		this.year = year
+		this.mileage = mileage
+		this.visit = visit
+		this.accident = accident
+	}
+
+	showInfoOne() {
+		const show1 = () => {
+			spamBrand.textContent = model.value
+		}
+		show1()
+	}
+}
+
+const car = new CarInfo(model.value, year.value, mileage.value, visit.value, accident.value)
 
 const clean = () => {
 	error.textContent = ''
@@ -35,3 +55,5 @@ const clean = () => {
 }
 
 btnClear.addEventListener('click', clean)
+
+btnAdvice.addEventListener('click', () => car.showInfoOne())
