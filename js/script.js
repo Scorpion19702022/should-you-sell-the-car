@@ -20,4 +20,18 @@ const info = document.querySelector('.advice__sell--info')
 let dateYear = new Date()
 let todayYear = dateYear.getFullYear()
 
-console.log(todayYear)
+const clean = () => {
+	error.textContent = ''
+	model.value = ''
+	year.value = ''
+	mileage.value = ''
+	visit.value = ''
+	accident.value = 0
+	spamBrand.textContent = ''
+	spamYear.textContent = ''
+	spamMileage.textContent = ''
+	spamVisit.textContent = ''
+	info.textContent = ''
+}
+
+btnClear.addEventListener('click', clean)
