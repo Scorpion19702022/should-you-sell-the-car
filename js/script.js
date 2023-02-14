@@ -17,4 +17,7 @@ const spamAccident = document.querySelector('.spamaccident')
 
 const info = document.querySelector('.advice__sell--info')
 
-console.log(info)
+let dateYear = new Date()
+let todayYear = dateYear.getFullYear()
+
+console.log(todayYear)
