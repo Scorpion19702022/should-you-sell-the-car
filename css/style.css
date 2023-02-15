@@ -126,13 +126,24 @@ body {
   color: var(--color-lighttwo);
   margin: 0.6em 0 0.2em;
 }
-.wrapper .info input,
-.wrapper .info select {
+.wrapper .info input {
   width: 100%;
   padding: 0.2em 0.4em;
   font-size: 1.4rem;
   background: none;
+  border-radius: 0.2em;
   border: none;
+  color: var(--color-lightone);
+  border-bottom: 0.04em solid var(--color-lightthree);
+  border-right: 0.04em solid var(--color-lightthree);
+}
+.wrapper .info select {
+  width: 100%;
+  padding: 0.2em 0.4em;
+  font-size: 1.4rem;
+  background-color: var(--color-darkone);
+  border: none;
+  border-radius: 0.2em;
   color: var(--color-lightone);
   border-bottom: 0.04em solid var(--color-lightthree);
   border-right: 0.04em solid var(--color-lightthree);
@@ -221,6 +232,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   border: 0.04em solid var(--color-middletwo);
   border-radius: 0.4em;
   background-color: var(--color-darktwo);
@@ -231,9 +243,14 @@ body {
   color: var(--color-lighttwo);
   margin-bottom: 0.4em;
 }
-.advice__sell p {
+.advice__sell--info {
   font-size: 1rem;
   color: var(--color-info);
+  padding-bottom: 0.5em;
+}
+.advice__sell--final {
+  color: var(--color-error);
+  font-size: 1.4rem;
 }
 
 @media (min-width: 768px) {
@@ -345,7 +362,10 @@ body {
     font-size: 2rem;
     padding-bottom: 2em;
   }
-  .advice__sell p {
+  .advice__sell--info {
     font-size: 1.4rem;
+  }
+  .advice__sell--final {
+    font-size: 2.4rem;
   }
 }/*# sourceMappingURL=style.css.map */
