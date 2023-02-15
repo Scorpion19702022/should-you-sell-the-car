@@ -94,6 +94,10 @@ body {
   font-size: 1rem;
   padding-bottom: 1.8em;
   color: var(--color-error);
+  visibility: hidden;
+}
+.wrapper .actionerror {
+  visibility: visible;
 }
 .wrapper .info {
   width: 100%;
@@ -284,6 +288,9 @@ body {
   }
   .wrapper p {
     font-size: 1.2rem;
+  }
+  .wrapper .error {
+    font-size: 1.8rem;
   }
   .wrapper ul {
     width: 60%;
