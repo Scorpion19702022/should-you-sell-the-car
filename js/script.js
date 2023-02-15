@@ -35,7 +35,7 @@ class CarInfo {
 			let age = todayYear - year.value
 			spamBrand.textContent = model.value
 			spamYear.textContent = year.value
-			spamAge.textContent = todayYear - year.value
+			spamAge.textContent = age
 			spamMileage.textContent = mileage.value
 			spamVisit.textContent = visit.value
 			spamAccident.textContent = accident.value
@@ -51,7 +51,7 @@ class CarInfo {
 				info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
 			}
 			if (age > 10 && mileage.value > 200000 && visit.value >= 4 && accident.value === 'TAK') {
-				info.textContent = `Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Twój samochód jest także po poważnej kolizji`
+				info.textContent = `Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś ${visit.value} wizyt w warsztacie w ostatnich. Twój samochód jest także po poważnej kolizji`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
@@ -160,8 +160,8 @@ class CarInfo {
 				error.classList.remove('actionerror')
 			} else if (accident.value === 'NIE') {
 				info.textContent = `Twój samochód ma tylko ${age} lat, nieduży jeszcze przebieg: ${mileage.value} km. W ostatnich dwóch latach był w warsztacie tylko ${visit.value} razy. Nie miał też poważnej kolizji`
-				infoFinal.style.color = 'Aquamarine'
-				infoFinal.textContent = 'Spokojnie możesz jeszcze jeździć swoim samochodem'
+				infoFinal.style.color = 'Lightblue'
+				infoFinal.textContent = 'Możesz jeszcze jeździć swoim samochodem'
 				model.value = ''
 				year.value = ''
 				mileage.value = ''
