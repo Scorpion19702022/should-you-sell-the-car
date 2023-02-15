@@ -35,7 +35,7 @@ class CarInfo {
 			let age = todayYear - year.value
 			spamBrand.textContent = model.value
 			spamYear.textContent = year.value
-			spamAge.textContent = age
+			spamAge.textContent = todayYear - year.value
 			spamMileage.textContent = mileage.value
 			spamVisit.textContent = visit.value
 			spamAccident.textContent = accident.value
