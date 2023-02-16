@@ -51,7 +51,7 @@ class CarInfo {
 				info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
 			}
 			if (age > 10 && mileage.value > 150000 && visit.value >= 4 && accident.value === 'TAK') {
-				info.textContent = `Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś ${visit.value} wizyt w warsztacie w ostatnich. Twój samochód jest także po poważnej kolizji`
+				info.textContent = `Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Twój samochód jest także po poważnej kolizji`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
