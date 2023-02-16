@@ -50,6 +50,20 @@ class CarInfo {
 				error.classList.add('actionerror')
 				info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
 			}
+
+			if (year.value > todayYear) {
+				info.textContent = `Jeszcze nie mamy ${year.value} roku`
+				infoFinal.textContent = 'Wypełnij poprawnie wszystkie pola'
+				model.value = ''
+				year.value = ''
+				mileage.value = ''
+				visit.value = ''
+				accident.value = 0
+				spamYear.textContent = `Błąd w dacie. Mamy ${todayYear} rok`
+				spamAge.textContent = 'Błąd'
+				error.classList.add('actionerror')
+			}
+
 			if (age > 10 && mileage.value > 150000 && visit.value >= 4 && accident.value === 'TAK') {
 				info.textContent = `Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Twój samochód jest także po poważnej kolizji`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
@@ -167,17 +181,6 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
-				error.classList.remove('actionerror')
-			} else if (year.value > todayYear) {
-				info.textContent = `Jeszcze nie mamy ${year.value} roku`
-				infoFinal.textContent = 'Wpisz odpowiedni rok'
-				model.value = ''
-				year.value = ''
-				mileage.value = ''
-				visit.value = ''
-				accident.value = 0
-				spamYear.textContent = 'Podany zły rok'
-				spamAge.textContent = 'Błąd'
 				error.classList.remove('actionerror')
 			}
 		}
