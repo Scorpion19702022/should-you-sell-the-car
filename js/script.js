@@ -168,6 +168,17 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
+			} else if (year.value > todayYear) {
+				info.textContent = `Jeszcze nie mamy ${year.value} roku`
+				infoFinal.textContent = 'Wpisz odpowiedni rok'
+				model.value = ''
+				year.value = ''
+				mileage.value = ''
+				visit.value = ''
+				accident.value = 0
+				spamYear.textContent = 'Podany zły rok'
+				spamAge.textContent = 'Błąd'
+				error.classList.remove('actionerror')
 			}
 		}
 		show1()
