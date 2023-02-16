@@ -50,7 +50,7 @@ class CarInfo {
 				error.classList.add('actionerror')
 				info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
 			}
-			if (age > 10 && mileage.value > 200000 && visit.value >= 4 && accident.value === 'TAK') {
+			if (age > 10 && mileage.value > 150000 && visit.value >= 4 && accident.value === 'TAK') {
 				info.textContent = `Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś ${visit.value} wizyt w warsztacie w ostatnich. Twój samochód jest także po poważnej kolizji`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
@@ -59,7 +59,7 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (mileage.value > 200000 && visit.value >= 4 && accident.value === 'TAK') {
+			} else if (mileage.value > 150000 && visit.value >= 4 && accident.value === 'TAK') {
 				info.textContent = `Twój samochód ma ${age} lat, czyli nie jest jeszcze stary. Jednakże ma duży przebieg: ${mileage.value} km. Miałaś/eś też aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Twój samochód jest także po poważnej kolizji`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
@@ -86,7 +86,7 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (age > 10 && mileage.value > 200000 && accident.value === 'TAK') {
+			} else if (age > 10 && mileage.value > 150000 && accident.value === 'TAK') {
 				info.textContent = `Miałaś/eś tylko ${visit.value} wizyt w warsztacie w ostatnich dwóch latach, co jest niewiele. Jednakże twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Twój samochód jest także po poważnej kolizji`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
@@ -95,7 +95,7 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (age > 10 && mileage.value > 200000 && visit.value >= 4 && accident.value === 'NIE') {
+			} else if (age > 10 && mileage.value > 150000 && visit.value >= 4 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji jednakże Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś też ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
@@ -104,7 +104,7 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (mileage.value > 200000 && visit.value >= 4 && accident.value === 'NIE') {
+			} else if (mileage.value > 150000 && visit.value >= 4 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma niewiele jeszcze bo ${age} lat. Jednakże ma duży przebieg: ${mileage.value} km i miałaś/eś też aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
@@ -131,7 +131,7 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (age > 10 && mileage.value > 200000 && accident.value === 'NIE') {
+			} else if (age > 10 && mileage.value > 150000 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach. Jednakże ma już ${age} lat i duży przebieg: ${mileage.value} km.`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
@@ -149,7 +149,7 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (mileage.value > 200000 && accident.value === 'NIE') {
+			} else if (mileage.value > 150000 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma tylko ${age} lat a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach. Jdnakże ma duży przebieg: ${mileage.value} km`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
