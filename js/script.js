@@ -113,8 +113,8 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (visit.value >= 4 && accident.value === 'NIE') {
-				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma niewiele jeszcze bo ${age} lat a także niewielki ${mileage.value} km przebiegu. Jednakże miałaś/eś aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
+			} else if (age > 10 && visit.value >= 4 && accident.value === 'NIE') {
+				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewielki ${mileage.value} km przebiegu. Jednakże ma już ${age} lat i miałaś/eś aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
@@ -122,8 +122,8 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (age > 10 && visit.value >= 4 && accident.value === 'NIE') {
-				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewielki ${mileage.value} km przebiegu. Jednakże ma już ${age} lat i miałaś/eś aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
+			} else if (visit.value >= 4 && accident.value === 'NIE') {
+				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma niewiele jeszcze bo ${age} lat a także niewielki ${mileage.value} km przebiegu. Jednakże miałaś/eś aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
