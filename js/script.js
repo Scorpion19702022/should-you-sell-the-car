@@ -78,7 +78,7 @@ class CarInfo {
 				accident.value = 0
 				error.classList.remove('actionerror')
 			} else if (accident.value === 'TAK') {
-				info.textContent = `Mimo tego że samochód ma tylko ${age} lat, nieduży jeszcze przebieg: ${mileage.value} i w ostatnich dwóch latach był tylko ${visit.value} w warsztacie to jest po POWAŻNEJ KOLIZJI`
+				info.textContent = `Mimo tego że samochód ma tylko ${age} lat, nieduży jeszcze przebieg: ${mileage.value} km i w ostatnich dwóch latach był tylko ${visit.value} w warsztacie to jest po POWAŻNEJ KOLIZJI`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
@@ -141,7 +141,7 @@ class CarInfo {
 				accident.value = 0
 				error.classList.remove('actionerror')
 			} else if (age > 10 && accident.value === 'NIE') {
-				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach oraz nieduży jeszcze przebieg: ${mileage.value}. Jednakże ma już ${age} lat.`
+				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach oraz nieduży jeszcze przebieg: ${mileage.value} km. Jednakże ma już ${age} lat.`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
