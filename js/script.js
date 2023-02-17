@@ -176,7 +176,7 @@ class CarInfo {
 				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (age > 10 && accident.value === 'NIE') {
-				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewiele bo tylko ${visit.value} wizyt w warsztacie w ostatnich dwóch latach oraz nieduży przebieg: ${mileage.value} km. Jednakże ma już ${age} lat.`
+				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewiele bo tylko ${visit.value} wizyt w warsztacie w ostatnich dwóch latach oraz nieduży jeszcze przebieg: ${mileage.value} km. Jednakże ma już ${age} lat.`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
