@@ -91,8 +91,8 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (accident.value === 'TAK') {
-				info.textContent = `Mimo tego że samochód ma tylko ${age} lat, nieduży jeszcze przebieg: ${mileage.value} km i w ostatnich dwóch latach był tylko ${visit.value} w warsztacie to jest po POWAŻNEJ KOLIZJI`
+			} else if (age > 10 && mileage.value > 150000 && accident.value === 'TAK') {
+				info.textContent = `Miałaś/eś tylko ${visit.value} wizyt w warsztacie w ostatnich dwóch latach, co jest niewiele. Jednakże twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Twój samochód jest także po POWAŻNEJ KOLIZJIs`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
@@ -100,8 +100,17 @@ class CarInfo {
 				visit.value = ''
 				accident.value = 0
 				error.classList.remove('actionerror')
-			} else if (age > 10 && mileage.value > 150000 && accident.value === 'TAK') {
-				info.textContent = `Miałaś/eś tylko ${visit.value} wizyt w warsztacie w ostatnich dwóch latach, co jest niewiele. Jednakże twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Twój samochód jest także po poważnej kolizji`
+			} else if (mileage.value > 150000 && accident.value === 'TAK') {
+				info.textContent = `Mimo, że samochód ma niewiele, bo ${age} lat, tylko ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Jednakże ma duży przebieg: ${mileage.value} km. Jest także po POWAŻNEJ KOLIZJI`
+				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
+				model.value = ''
+				year.value = ''
+				mileage.value = ''
+				visit.value = ''
+				accident.value = 0
+				error.classList.remove('actionerror')
+			} else if (accident.value === 'TAK') {
+				info.textContent = `Mimo tego że samochód ma tylko ${age} lat, nieduży jeszcze przebieg: ${mileage.value} km i w ostatnich dwóch latach był tylko ${visit.value} w warsztacie to jest po POWAŻNEJ KOLIZJI`
 				infoFinal.textContent = 'Powinnaś/eś sprzedać swój samochód'
 				model.value = ''
 				year.value = ''
