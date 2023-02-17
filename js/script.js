@@ -49,6 +49,7 @@ class CarInfo {
 			) {
 				error.classList.add('actionerror')
 				info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
+				spamAge.textContent = 0
 			}
 
 			if (year.value > todayYear) {
@@ -72,6 +73,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (mileage.value > 150000 && visit.value >= 4 && accident.value === 'TAK') {
 				info.textContent = `Twój samochód ma ${age} lat, czyli nie jest jeszcze stary. Jednakże ma duży przebieg: ${mileage.value} km. Miałaś/eś też aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Twój samochód jest także po poważnej kolizji`
@@ -81,6 +83,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (age > 10 && visit.value >= 4 && accident.value === 'TAK') {
 				info.textContent = `Twój samochód ma przebieg: ${mileage.value} km i nie jest on jeszcze duży. Jednakże ma już ${age} lat. Miałaś/eś też aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Twój samochód jest także po poważnej kolizji`
@@ -90,6 +93,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (age > 10 && mileage.value > 150000 && accident.value === 'TAK') {
 				info.textContent = `Miałaś/eś tylko ${visit.value} wizyt w warsztacie w ostatnich dwóch latach, co jest niewiele. Jednakże twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Twój samochód jest także po POWAŻNEJ KOLIZJIs`
@@ -99,6 +103,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (mileage.value > 150000 && accident.value === 'TAK') {
 				info.textContent = `Mimo, że samochód ma niewiele, bo ${age} lat, tylko ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Jednakże ma duży przebieg: ${mileage.value} km. Jest także po POWAŻNEJ KOLIZJI`
@@ -108,6 +113,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (accident.value === 'TAK') {
 				info.textContent = `Mimo tego że samochód ma tylko ${age} lat, nieduży jeszcze przebieg: ${mileage.value} km i w ostatnich dwóch latach był tylko ${visit.value} w warsztacie to jest po POWAŻNEJ KOLIZJI`
@@ -117,6 +123,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (age > 10 && mileage.value > 150000 && visit.value >= 4 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji jednakże Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś też ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
@@ -126,6 +133,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (mileage.value > 150000 && visit.value >= 4 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma niewiele jeszcze bo ${age} lat. Jednakże ma duży przebieg: ${mileage.value} km i miałaś/eś też aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
@@ -135,6 +143,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (age > 10 && visit.value >= 4 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewielki ${mileage.value} km przebiegu. Jednakże ma już ${age} lat i miałaś/eś aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
@@ -144,6 +153,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (visit.value >= 4 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma niewiele jeszcze bo ${age} lat a także niewielki ${mileage.value} km przebiegu. Jednakże miałaś/eś aż ${visit.value} wizyt w warsztacie w ostatnich dwóch latach.`
@@ -153,6 +163,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (age > 10 && mileage.value > 150000 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach. Jednakże ma już ${age} lat i duży przebieg: ${mileage.value} km.`
@@ -162,6 +173,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (age > 10 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach oraz nieduży jeszcze przebieg: ${mileage.value} km. Jednakże ma już ${age} lat.`
@@ -171,6 +183,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (mileage.value > 150000 && accident.value === 'NIE') {
 				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma tylko ${age} lat a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach. Jdnakże ma duży przebieg: ${mileage.value} km`
@@ -180,6 +193,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (accident.value === 'NIE') {
 				info.textContent = `Twój samochód ma tylko ${age} lat, nieduży jeszcze przebieg: ${mileage.value} km. W ostatnich dwóch latach był w warsztacie tylko ${visit.value} razy. Nie miał też poważnej kolizji`
@@ -190,6 +204,7 @@ class CarInfo {
 				mileage.value = ''
 				visit.value = ''
 				accident.value = 0
+				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			}
 		}
