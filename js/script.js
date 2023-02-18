@@ -210,7 +210,7 @@ class CarInfo {
 				mileage.value != '' &&
 				visit.value != ''
 			) {
-				info.textContent = `Twój samochód ma tylko ${age} lat, nieduży jeszcze przebieg: ${mileage.value} km. W ostatnich dwóch latach był w warsztacie tylko ${visit.value} razy. Nie miał też poważnej kolizji`
+				info.textContent = `Twój samochód ma tylko ${age} lat, nieduży przebieg: ${mileage.value} km. W ostatnich dwóch latach był w warsztacie tylko ${visit.value} razy. Nie miał też poważnej kolizji`
 				infoFinal.style.color = 'Lightblue'
 				infoFinal.textContent = 'Nie musisz sprzedawać samochodu'
 				model.value = ''
