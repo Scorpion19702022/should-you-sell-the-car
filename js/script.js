@@ -50,8 +50,6 @@ class CarInfo {
 				error.classList.add('actionerror')
 				info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
 				spamAge.textContent = '0'
-			} else {
-				return true
 			}
 
 			if (year.value > todayYear) {
@@ -220,11 +218,6 @@ class CarInfo {
 				accident.value = 0
 				spamAge.textContent = age
 				error.classList.remove('actionerror')
-				// } else {
-				// 	error.classList.add('actionerror')
-				// 	info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
-				// 	spamAge.textContent = '0'
-				// 	infoFinal.textContent = ''
 			}
 		}
 		show1()
