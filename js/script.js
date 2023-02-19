@@ -41,15 +41,19 @@ class CarInfo {
 			spamAccident.textContent = accident.value
 
 			if (
+				accident.value !== 'NIE' ||
 				model.value !== '' ||
 				year.value !== '' ||
 				mileage.value !== '' ||
-				visit.value !== '' ||
-				accident.value !== 0
+				visit.value !== ''
 			) {
 				error.classList.add('actionerror')
 				info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
+				infoFinal.textContent = ''
 				spamAge.textContent = '0'
+				console.log(accident.value)
+			} else {
+				return true
 			}
 
 			if (year.value > todayYear) {
@@ -63,9 +67,7 @@ class CarInfo {
 				spamYear.textContent = `Błąd w dacie. Mamy ${todayYear} rok`
 				spamAge.textContent = 'Błąd'
 				error.classList.add('actionerror')
-			}
-
-			if (age > 10 && mileage.value > 150000 && visit.value >= 4 && accident.value === 'TAK') {
+			} else if (age > 10 && mileage.value > 150000 && visit.value >= 4 && accident.value === 'TAK') {
 				info.textContent = `Twój samochód ma ${age} lat. Duży przebieg: ${mileage.value} km. Miałaś/eś ${visit.value} wizyt w warsztacie w ostatnich dwóch latach. Twój samochód jest także po POWAŻNEJ KOLIZJI`
 				infoFinal.textContent = 'Rozważ sprzedaż samochodu'
 				model.value = ''
@@ -192,7 +194,7 @@ class CarInfo {
 				spamAge.textContent = age
 				error.classList.remove('actionerror')
 			} else if (mileage.value > 150000 && accident.value === 'NIE') {
-				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma tylko ${age} lat a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach. Jdnakże ma duży przebieg: ${mileage.value} km`
+				info.textContent = `Mimo, że samochód nie miał poważnej kolizji i ma tylko ${age} lat a także niewiele bo tylko ${visit.value} wizyty w warsztacie w ostatnich dwóch latach. Jdnakże ma duży przebieg: ${mileage.value} km `
 				infoFinal.textContent = 'Rozważ sprzedaż samochodu'
 				model.value = ''
 				year.value = ''
@@ -201,13 +203,7 @@ class CarInfo {
 				accident.value = 0
 				spamAge.textContent = age
 				error.classList.remove('actionerror')
-			} else if (
-				accident.value === 'NIE' &&
-				model.value != '' &&
-				year.value != '' &&
-				mileage.value != '' &&
-				visit.value != ''
-			) {
+			} else if (age <= 10 && mileage.value <= 150000 && visit.value < 4 && accident.value === 'NIE') {
 				info.textContent = `Twój samochód ma tylko ${age} lat, nieduży przebieg: ${mileage.value} km. W ostatnich dwóch latach był w warsztacie tylko ${visit.value} razy. Nie miał też poważnej kolizji`
 				infoFinal.style.color = 'Lightblue'
 				infoFinal.textContent = 'Nie musisz sprzedawać samochodu'
@@ -218,6 +214,12 @@ class CarInfo {
 				accident.value = 0
 				spamAge.textContent = age
 				error.classList.remove('actionerror')
+			} else {
+				error.classList.add('actionerror')
+				info.textContent = 'wypełnij poprawnie wszystkie pola by uzyskać informacje'
+				infoFinal.textContent = ''
+				spamAge.textContent = ''
+				// console.log(accident.value)
 			}
 		}
 		show1()
